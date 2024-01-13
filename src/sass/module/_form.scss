@@ -1,0 +1,223 @@
+@use 'global'as *;
+
+
+.form__item {
+    padding-bottom: rem(24);
+    border-bottom: rem(1) dotted $green2;
+
+    @include mq("md") {
+        padding-bottom: rem(41);
+    }
+}
+
+.form__item:not(:first-child) {
+    margin-top: rem(22);
+
+    @include mq("md") {
+        margin-top: rem(38);
+    }
+}
+
+.form__content-wrap {
+    @include mq("md") {
+        display: flex;
+    }
+}
+
+.form__label {
+    @include mq("md") {
+        width: calc(100% - 68.5714%);
+    }
+}
+
+.form__label span {
+    display: inline-block;
+    margin-left: rem(8);
+    width: rem(61);
+    padding-top: rem(3);
+    padding-left: rem(4);
+    text-align: center;
+    font-size: rem(12);
+    background-color: #C94800;
+    color: $white;
+    letter-spacing: 0.4em;
+}
+
+.form__input {
+    margin-top: rem(17);
+
+    @include mq("md") {
+        margin-top: 0;
+        width: 68.5714%;
+    }
+}
+
+.form__input.form__input--checkbox {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(11);
+    margin-top: rem(12);
+
+    @include mq("md") {
+        margin-top: rem(7);
+    }
+}
+
+.form__input-text {
+    width: 100%;
+    padding: rem(10.25) rem(16) rem(10.25) rem(7);
+    border: rem(1) solid $green2;
+    font-size: rem(12);
+}
+
+.form__input-text.is-active {
+    border: rem(1) solid #C94800;
+    background-color: rgba($color: #C94800, $alpha: 0.2);
+}
+
+.form__input-text::placeholder {
+    color: #DDF0F1;
+}
+
+.form__input-text.is-active::placeholder {
+    color: $white;
+}
+
+.form__input-text+span {
+    display: block;
+    padding-left: rem(22);
+    position: relative;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.form__input-text+span::before {
+    content: "";
+    position: absolute;
+    width: rem(14);
+    height: rem(14);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid $green2;
+}
+
+.form__input-text+span::after {
+    content: "";
+    position: absolute;
+    width: rem(13);
+    height: rem(5);
+    left: 0.4%;
+    top: 30%;
+    background-image: url(../images/common/check-mark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+}
+
+
+input:checked.input:checked span::after {
+    opacity: 1;
+}
+
+.form__input-text.form__input-text--textarea {
+    height: rem(200);
+    resize: none;
+}
+
+.form__input-text.form__input-text--campaign {
+    padding: rem(5.5);
+}
+
+.form__privacy {
+    margin-top: rem(35);
+    text-align: center;
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.form__privacy-text+span {
+    display: inline-block;
+    padding-left: rem(60);
+    position: relative;
+    font-size: rem(14);
+    width: 100%;
+    max-width: rem(320);
+    text-align: left;
+
+    @include mq("md") {
+        text-align: center;
+        max-width: initial;
+    }
+}
+
+.form__privacy-text+span::before {
+    content: "";
+    position: absolute;
+    width: rem(22);
+    height: rem(22);
+    top: 0;
+    left: rem(31);
+    border: rem(1) solid $green2;
+    background-color: $white;
+
+    @include mq("md") {
+        left: rem(185);
+    }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .form__privacy-text+span::before {
+    @include mq("md") {
+        left: rem(180);
+    }
+}
+
+.form__privacy-text+span::after {
+    content: "";
+    position: absolute;
+    width: rem(17);
+    height: rem(7);
+    left: 10.5%;
+    top: 20%;
+    background-image: url(../images/common/check-mark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+
+    @include mq("md") {
+        left: 27%;
+        top: 38%;
+    }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .form__privacy-text+span::after {
+    @include mq("md") {
+        left: 26%;
+    }
+}
+
+
+.form__button {
+    text-align: center;
+    margin-top: rem(24);
+
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.input[type=submit] {
+    color: $green2;
+}
+
+input:checked+span::after {
+    opacity: 1;
+}

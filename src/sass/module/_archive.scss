@@ -1,0 +1,79 @@
+@use "global"as *;
+
+.archive__year span {
+    font-size: rem(24);
+    color: $green2;
+    padding-left: rem(32);
+    position: relative;
+}
+
+.archive__year span::before {
+    content: "";
+    position: absolute;
+    width: rem(22);
+    height: rem(24);
+    top: 27%;
+    left: rem(1);
+    background-image: url(../images/common/archive-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: rotate(30deg);
+    transition: 0.3s transform;
+}
+
+.archive__year.is-open span::before {
+    transform: rotate(240deg);
+    top: 15%;
+}
+
+.archive__month span {
+    font-size: rem(24);
+    color: $green2;
+    padding-left: rem(32);
+    position: relative;
+}
+
+.archive__month span::before {
+    content: "";
+    position: absolute;
+    width: rem(22);
+    height: rem(24);
+    top: 24%;
+    left: 0;
+    transform: rotate(30deg);
+    background-image: url(../images/common/archive-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.archive__year.archive__year--last span::before {
+    transform: rotate(30deg);
+    top: 31%;
+}
+
+.archive__items {
+    padding-left: rem(24);
+    margin-top: rem(2);
+}
+
+.archive__item:not(:first-child) {
+    margin-top: rem(3);
+}
+
+.archive__item.archive__item--none {
+    display: none;
+}
+
+.archive__item.archive__item--none.is-open {
+    display: block;
+}
+
+.archive__item a {
+    display: block;
+}
+
+.archive__list {
+    margin-top: rem(8);
+}

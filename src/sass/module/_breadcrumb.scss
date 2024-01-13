@@ -1,0 +1,26 @@
+@use 'global'as *;
+
+.breadcrumb__contents {
+    display: flex;
+    align-items: center;
+    gap: rem(7);
+    position: relative;
+    @include mq("md") {
+    gap: rem(7);
+	}
+}
+
+.breadcrumb__contents span {
+font-size: rem(14);
+color: $green;
+text-transform: uppercase;
+}
+
+.breadcrumb__contents.breadcrumb__contents--not-found span {
+    color: $white;
+}
+
+.breadcrumb__white {
+    color: $white;
+}
+

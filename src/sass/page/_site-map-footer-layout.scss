@@ -1,0 +1,10 @@
+@use "global"as *;
+
+.site-map-navi-layout {
+    margin-top: rem(50);
+
+    @include mq("md") {
+        margin-top: rem(147);
+    }
+
+}

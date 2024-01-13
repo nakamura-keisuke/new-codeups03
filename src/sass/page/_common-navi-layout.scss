@@ -1,0 +1,10 @@
+@use "global"as *;
+
+.common-navi-layout {
+    margin-top: rem(103);
+
+    @include mq("md") {
+        margin-top: rem(160);
+    }
+
+}

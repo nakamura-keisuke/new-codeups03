@@ -1,0 +1,41 @@
+@use 'global'as *;
+
+.blog-comment {
+    margin-top: rem(77) ;
+}
+
+.blog-comment__card {
+    margin-top: rem(26);
+    @include mq("md") {
+    margin-top: rem(24);
+	}
+}
+
+.blog-comment-card__body {
+    margin-top: rem(16);
+}
+
+.blog-comment__card-img img{
+    aspect-ratio: 294 / 218;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-comment-card__age {
+    color: $green;
+    font-size: rem(12);
+}
+
+.blog-comment-card__title {
+    margin-top: rem(8);
+    color: $green;
+    font-size: rem(24);
+    font-weight: $medium;
+    line-height: normal;
+}
+
+.blog-comment-card__button {
+    text-align: center;
+    margin-top: rem(44);
+
+}

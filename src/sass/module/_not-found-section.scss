@@ -1,0 +1,78 @@
+@use 'global'as *;
+
+.not-found {
+    background-color: $green2;
+}
+
+.not-found-section {
+    padding: rem(87) 0 rem(20);
+    background-color: $green2;
+    @include mq("md") {
+        padding: rem(97) 0 rem(148);
+    }
+}
+
+.not-found-section__contents {
+    position: relative;
+    margin-top: rem(48);
+    @include mq("md") {
+    margin-top: rem(115);
+	}
+}
+
+.not-found-section__contents::after {
+    content: "";
+    position: absolute;
+    width: rem(350);
+    height: rem(294);
+    top: rem(-45);
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../images/common/404-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include mq("md") {
+    width: rem(698);
+    height: rem(698);
+    top: rem(-144);
+    left: calc(50% - min(47vw, 33.875rem));
+    transform: translateX(0);
+    }
+}
+
+.not-found-section__title {
+    text-align: center;
+    color: $white;
+    font-family: $third-font;
+    font-size: rem(80);
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    height: 100%;
+    @include mq("md") {
+    font-size: rem(160);
+	}
+}
+
+.not-found-section__text {
+    color: $white;
+    text-align: center;
+    font-family: $third-font;
+    font-size: rem(16);
+    line-height: 1.5;
+    @include mq("md") {
+    margin-top: rem(26);
+	}
+}
+
+.not-found-section__button {
+    text-align: center;
+    margin-top: rem(37);
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+

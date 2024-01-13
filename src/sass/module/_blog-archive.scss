@@ -1,0 +1,12 @@
+@use 'global'as *;
+
+.blog-archive {
+    margin-top: rem(85);
+    @include mq("md") {
+    margin-top: rem(84);
+	}
+}
+
+.blog-archive__content {
+    margin-top: rem(23);
+}

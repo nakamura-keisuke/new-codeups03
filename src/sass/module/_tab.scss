@@ -1,0 +1,47 @@
+@use 'global'as *;
+
+.tab__tab-button {
+    font-size: rem(14);
+    display: inline-block;
+    width: rem(162);
+    padding: rem(5.2) 0;
+    transition: 0.3s background-color, 0.3s color;
+    color: $green2;
+    border: rem(1) solid $green2;
+    background-color: $white;
+    text-align: center;
+}
+
+.tab__tab-button:not(:first-child) {
+    @include mq("md") {
+        margin-left: rem(28);
+    }
+}
+
+.tab__tab-button.tab__tab-button--all {
+    text-transform: uppercase;
+    color: $white;
+    background-color: $green2;
+}
+
+.tab__tab-button.tab__tab-button--all::before {
+    content: "";
+    background-image: url(../images/common/campaign-section-sp-img.png);
+    position: absolute;
+    background-size: cover;
+    height: rem(55);
+    top: rem(-24);
+    width: 100%;
+    z-index: 0;
+    left: calc(50% - min(45.5vw, 15rem));
+    max-width: rem(120);
+
+    @include mq("md") {
+        background-image: url(../images/common/campaign-section-img.png);
+        max-width: rem(301);
+        height: rem(138);
+        top: rem(-71);
+        left: calc(50% - min(47vw, 38.875rem));
+
+    }
+}

@@ -1,0 +1,136 @@
+@use "global"as *;
+
+
+.site-map {
+    width: 100%;
+    position: relative;
+}
+
+
+.site-map::before {
+    content: "";
+    background-image: url(../images/common/campaign-section-sp-img.png);
+    position: absolute;
+    background-size: cover;
+    height: rem(55);
+    top: rem(-25);
+    width: 100%;
+    z-index: 0;
+    left: calc(50% - min(45.5vw, 15rem));
+    max-width: rem(120);
+
+    @include mq("md") {
+        content: none;
+    }
+}
+
+.site-map.site-map--site-map {
+    background-color: initial;
+}
+
+.site-map-menu__inner.inner {
+    @include mq("md") {
+        text-align: center;
+
+    }
+}
+
+.site-map-menu__inner.inner.inner--site-map {
+    text-align: center;
+}
+
+.site-map-menu__contents {
+    text-align-last: left;
+    column-count: 2;
+    column-gap: rem(7);
+    width: 100%;
+
+    @include mq("md") {
+        column-count: 4;
+        gap: clamp(3.75rem, -0.261rem + 8.346vw, 7.25rem);
+        // 60px~116px 画面768px~1440px
+    }
+}
+
+.site-map-menu__items {
+    width: 100%;
+}
+
+.site-map-menu__items:not(:first-child) {
+    margin-top: rem(42);
+}
+
+.site-map-menu__item {
+    transition: .3s opacity;
+    margin-top: rem(25.5);
+
+    @include mq("md") {
+        margin-top: rem(26);
+    }
+}
+
+.site-map-menu__item:hover {
+    opacity: 0.7;
+}
+
+.site-map-menu__item a {
+    width: 100%;
+    display: block;
+    font-size: rem(16);
+    font-weight: $normal;
+    line-height: 1;
+    padding-left: rem(22);
+    color: $green;
+
+}
+
+.site-map-menu__item.site-map-menu__item--big {
+    padding-left: rem(18.4);
+    margin-top: rem(40);
+    position: relative;
+}
+
+.site-map-menu__item.site-map-menu__item--big:first-child {
+    margin-top: rem(0);
+}
+
+.site-map-menu__item.site-map-menu__item--big::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: inline-block;
+    width: rem(18);
+    height: rem(18);
+    background-image: url(../images/common/logo-starfish--site-map.svg);
+    background-size: cover;
+    background-position: center;
+    vertical-align: middle;
+}
+
+.site-map-menu__item.site-map-menu__item--big a {
+    width: 100%;
+    display: block;
+    font-weight: 700;
+    padding-left: rem(4);
+}
+
+.site-map__copyright {
+    margin-top: rem(35);
+    text-align: center;
+
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.site-map__copyright small {
+    color: $white;
+    font-family: $second-font;
+    font-size: rem(12);
+    display: inline-block;
+
+    @include mq("md") {
+        font-size: rem(14);
+    }
+}

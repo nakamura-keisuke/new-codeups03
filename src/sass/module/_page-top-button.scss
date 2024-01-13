@@ -1,0 +1,10 @@
+@use "global"as *;
+
+.page-top-button {
+    @include mq("md") {
+        width: rem(80);
+        height: rem(80);
+        cursor: pointer;
+        content: url(../images/common/page-top-button.svg);
+    }
+}

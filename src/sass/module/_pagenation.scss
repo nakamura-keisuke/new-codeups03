@@ -1,0 +1,114 @@
+@use 'global'as *;
+
+.wp-pagenavi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+    gap: 0 rem(12);
+}
+
+.wp-pagenavi.wp-pagenavi--blog-license {
+    @include mq("md") {
+        justify-content: initial;
+        margin-left: rem(232);
+    }
+}
+
+.current,
+.page-larger {
+    padding: rem(6) rem(13.9);
+    color: $green2;
+    border: rem(1) solid $green2;
+    border-radius: 1px;
+    transition: 0.3s color, 0.3s background-color;
+    text-align: center;
+}
+
+.previuspostslink,
+.nextpostslink {
+    padding: rem(18) rem(17.6);
+    border: rem(1) solid $green2;
+}
+
+
+.page-larger:hover,
+.current:hover {
+    @include mq("md") {
+        color: $white;
+        background-color: $green2;
+    }
+}
+
+.pagination__contents.current a {
+    pointer-events: none;
+    color: $white;
+    background-color: $green2;
+}
+
+
+.previuspostslink,
+.nextpostslink {
+    position: relative;
+}
+
+.previuspostslink:hover,
+.nextpostslink:hover {
+    @include mq("md") {
+        background-color: $green2;
+        transition: 0.3s background-color;
+    }
+}
+
+.previuspostslink::before {
+    content: "";
+    position: absolute;
+    width: rem(10);
+    height: rem(10);
+    top: 39%;
+    left: 44%;
+    border-top: rem(1) solid $green2;
+    border-left: rem(1) solid $green2;
+    transform: rotate(-45deg);
+}
+
+.previuspostslink:hover::before {
+    border-top: rem(1) solid $white;
+    border-left: rem(1) solid $white;
+}
+
+
+.nextpostslink::after {
+    content: "";
+    position: absolute;
+    width: rem(10);
+    height: rem(10);
+    top: 39%;
+    left: 33%;
+    border-top: rem(1) solid $green2;
+    border-right: rem(1) solid $green2;
+    transform: rotate(45deg);
+}
+
+.nextpostslink:hover::after {
+    border-top: rem(1) solid $white;
+    border-right: rem(1) solid $white;
+    transform: rotate(45deg);
+}
+
+.nextpostslink.nextpostslink-blog-license {
+    @include mq("md") {
+        margin-left: rem(71);
+    }
+}
+
+.current,
+.nextpostslink {
+    margin-left: rem(26);
+}
+
+.current.current--color {
+    color: $white;
+    background-color: $green2;
+}

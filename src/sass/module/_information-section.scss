@@ -1,0 +1,175 @@
+@use 'global'as *;
+
+.information-section {
+    position: relative;
+}
+
+.information-section::before {
+    content: "";
+    background-image: url(../images/common/campaign-section-sp-img.png);
+    position: absolute;
+    background-size: cover;
+    height: rem(55);
+    top: rem(-92);
+    width: 100%;
+    z-index: 0;
+    left: calc(50% - min(45.8vw, 15rem));
+    max-width: rem(120);
+
+    @include mq("md") {
+        background-image: url(../images/common/campaign-section-img.png);
+        max-width: rem(301);
+        height: rem(138);
+        top: rem(-71);
+        left: calc(50% - min(47vw, 38.875rem));
+    }
+}
+
+.information-section__buttons {
+    gap: rem(19);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq("md") {
+        gap: rem(90);
+    }
+}
+
+.information-section__button {
+    display: block;
+    color: $green2;
+    text-align: center;
+    padding: rem(9) 0;
+    width: rem(102);
+    background-color: $green3;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.3s background-color, 0.3s color;
+    font-size: rem(14);
+
+    @include mq("md") {
+        font-size: rem(16);
+        width: initial;
+        padding: rem(29) rem(30) rem(26) rem(102);
+        font-size: clamp(1.125rem, 0.698rem + 0.89vw, 1.5rem);
+        //18px~24px 767px~1440pxの画面幅で
+    }
+}
+
+.information-section__button.information-section__button--license {
+    position: relative;
+}
+
+.information-section__button.information-section__button--license::before {
+    @include mq("md") {
+        background-image: url(../images/common/information-section-button-img1.svg);
+        top: rem(15);
+        left: rem(30);
+        position: absolute;
+        height: rem(63);
+        max-width: rem(63);
+        background-size: cover;
+        width: 100%;
+        content: "";
+        z-index: 3;
+    }
+}
+
+.information-section__button.information-section__button--license.is-active::before {
+    @include mq("md") {
+        background-color: $green3;
+        mask-image: url(../images/common/information-section-button-img1.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-image: none;
+    }
+}
+
+.information-section__button.information-section__button--fun {
+    @include mq("md") {
+        padding: rem(29) rem(18) rem(26) rem(90);
+        position: relative;
+    }
+}
+
+.information-section__button.information-section__button--fun::before {
+    @include mq("md") {
+        background-image: url(../images/common/information-section-button-img2.svg);
+        top: rem(15);
+        left: rem(18);
+        position: absolute;
+        height: rem(63);
+        max-width: rem(63);
+        background-size: cover;
+        width: 100%;
+        content: "";
+        z-index: 3;
+    }
+}
+
+.information-section__button.information-section__button--fun.is-active::before {
+    @include mq("md") {
+        background-color: $green3;
+        mask-image: url(../images/common/information-section-button-img2.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-image: none;
+    }
+}
+
+.information-section__button.information-section__button--experience {
+    position: relative;
+}
+
+.information-section__button.information-section__button--experience::before {
+    @include mq("md") {
+        background-image: url(../images/common/information-section-button-img3.svg);
+        top: rem(15);
+        left: rem(30);
+        position: absolute;
+        height: rem(63);
+        max-width: rem(63);
+        background-size: cover;
+        width: 100%;
+        content: "";
+        z-index: 3;
+    }
+}
+
+.information-section__button.information-section__button--experience.is-active::before {
+    @include mq("md") {
+        background-color: $green3;
+        mask-image: url(../images/common/information-section-button-img3.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-image: none;
+    }
+}
+
+.information-section__button.is-active {
+    color: $white;
+    background-color: $green2;
+}
+
+
+
+.information-section__items {
+    margin-top: rem(16);
+
+    @include mq("md") {
+        margin-top: rem(24);
+    }
+}
+
+.information-section__item {
+    border: rem(1) solid $green2;
+    padding: rem(16) rem(24) rem(24);
+
+    @include mq("md") {
+        padding-top: rem(22);
+        padding-bottom: rem(23);
+    }
+}

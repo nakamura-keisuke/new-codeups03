@@ -1,0 +1,48 @@
+@use "global"as *;
+
+.section-header {
+    text-align: center;
+}
+
+.section-header__big {
+    font-family: $second-font;
+    font-size: rem(32);
+    line-height: 1;
+    color: $green;
+    font-weight: $normal;
+
+    @include mq("md") {
+        font-size: rem(40);
+    }
+}
+
+.section-header__big::first-letter {
+    color: $green2;
+    text-transform: uppercase;
+}
+
+.section-header__big.section-header__big--contact {
+    font-size: rem(80);
+    width: 100%;
+}
+
+.section-header__small {
+    color: $green2;
+    font-size: rem(12);
+    line-height: 1;
+    margin-top: rem(11);
+}
+
+.section-header__small.section-header__small--contact {
+    margin-top: rem(-3.2);
+    line-height: 1;
+}
+
+
+.section-header__big.section-header__big--blog,
+.section-header__big.section-header__big--blog::first-letter,
+.section-header__small.section-header__small--blog {
+    @include mq("md") {
+        color: $white;
+    }
+}

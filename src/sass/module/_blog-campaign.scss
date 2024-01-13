@@ -1,0 +1,25 @@
+@use 'global'as *;
+
+.blog-campaign {
+    margin-top: rem(83);
+    @include mq("md") {
+    margin-top: rem(85);
+	}
+}
+
+.blog-campaign.blog-campaign--license {
+    margin-top: rem(81)
+}
+
+.blog-campaign__items {
+    margin-top: rem(24);
+}
+
+.blog-campaign__item:not(:first-child) {
+    margin-top: rem(38);
+}
+
+.blog-campaign-card__button{
+    margin-top: rem(40);
+    text-align: center;
+}

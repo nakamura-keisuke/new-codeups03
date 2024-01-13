@@ -1,0 +1,129 @@
+@use "global"as *;
+
+.button {
+    position: relative;
+    background-color: $green2;
+    padding: rem(19) rem(41.88);
+    color: $white;
+    font-family: $second-font;
+    font-size: rem(14);
+    line-height: 1;
+    display: inline-block;
+    border: solid rem(1) $green2;
+    z-index: 3;
+    text-align: center;
+}
+
+.button.button--faq {
+    padding: rem(19) rem(55);
+}
+
+::-webkit-full-page-media,
+:future,
+:root .button.button--faq span {
+    left: rem(5.3);
+    height: rem(65);
+    width: rem(212);
+}
+
+.button.button--faq:hover input {
+    color: $green2;
+}
+
+.button.button--not-found {
+    color: $green2;
+    background-color: $white;
+}
+
+.button::after {
+    z-index: 2;
+    content: "";
+    display: inline-block;
+    width: rem(40);
+    height: rem(8);
+    background-image: url(../images/common/arrow.svg);
+    background-size: cover;
+    background-position: center;
+    vertical-align: top;
+    margin-left: rem(6);
+}
+
+.button:hover::after {
+    @include mq("md") {
+        background-image: url(../images/common/arrow-green.svg);
+        width: rem(40);
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .button:hover::after {
+    vertical-align: revert;
+}
+
+.button.button--not-found::after {
+    background-image: url(../images/common/arrow-green.svg);
+    width: rem(40);
+    display: inline-block;
+    vertical-align: top;
+}
+
+::-webkit-full-page-media,
+:future,
+:root .button.button--faq::after {
+    vertical-align: revert;
+}
+
+.button span {
+    position: absolute;
+    z-index: -3;
+    border: solid rem(1) $green2;
+    width: rem(204);
+    height: rem(54);
+    top: rem(4);
+    left: rem(4);
+}
+
+.button.button--not-found span {
+    border: solid rem(1) $white;
+    width: rem(198);
+}
+
+::-webkit-full-page-media,
+:future,
+:root .button span {
+    left: rem(6);
+}
+
+.button::before {
+    background-color: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+}
+
+.button:hover {
+    @include mq("md") {
+        color: $green2;
+    }
+}
+
+.button:hover::before {
+    @include mq("md") {
+        transform: scale(1, 1);
+    }
+}
+
+.button__text {
+    color: $white;
+    text-transform: capitalize;
+}

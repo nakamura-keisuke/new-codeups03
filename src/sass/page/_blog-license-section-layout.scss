@@ -1,0 +1,8 @@
+@use 'global'as *;
+
+.blog-license-section-layout {
+    margin-top: rem(42);
+    @include mq("md") {
+        margin-top: rem(143);
+    }
+}

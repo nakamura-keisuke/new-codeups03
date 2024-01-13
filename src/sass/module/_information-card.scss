@@ -1,0 +1,66 @@
+@use 'global'as *;
+
+.information-card {
+    display: none;
+}
+
+.information-card.is-active {
+    display: block;
+}
+
+.information-card__contents {
+    @include mq("md") {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.information-card__text-body {
+    @include mq("md") {
+        width: 47.77%;
+        margin-top: rem(59);
+    }
+}
+
+.information-card__title {
+    color: $green;
+    font-size: rem(24);
+    font-weight: $bold;
+    border-bottom: rem(1) solid $green2;
+    padding-bottom: rem(3);
+
+    @include mq("md") {
+        padding-bottom: rem(1);
+    }
+}
+
+.information-card__text {
+    margin-top: rem(8);
+    color: $black;
+    line-height: 1.5;
+    letter-spacing: normal;
+
+    @include mq("md") {
+        font-size: rem(16);
+    }
+}
+
+.information-card__img {
+    margin-top: rem(8);
+
+    @include mq("md") {
+        margin-top: 0;
+        width: 47.77%;
+    }
+}
+
+.information-card__img picture img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 297 / 189;
+
+    @include mq("md") {
+        aspect-ratio: 492 / 313;
+    }
+
+}

@@ -1,0 +1,108 @@
+@use "global"as *;
+
+
+.campaign {
+    overflow: hidden;
+}
+
+.campaign__inner {
+    @include mq("md") {
+        position: relative;
+    }
+}
+
+.campaign__contents {
+    margin-top: rem(32);
+    margin-right: calc(50% - 50vw);
+    height: 100%;
+
+    @include mq("md") {
+        margin-top: rem(44);
+    }
+}
+
+.campaign__slide {
+    height: auto;
+    padding-bottom: rem(10);
+    width: rem(280);
+
+    @include mq("md") {
+        width: rem(334);
+    }
+}
+
+.campaign__button {
+    text-align: center;
+    margin-top: rem(30);
+    margin-bottom: rem(6);
+
+    @include mq("md") {
+        margin-top: rem(70);
+        margin-bottom: rem(6);
+    }
+}
+
+
+.campaign {
+    .js-campaign-swiper .swiper-wrapper {
+        transition-timing-function: linear;
+    }
+
+    /* 前へ次への矢印カスタマイズ */
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+        height: rem(80);
+        width: rem(80);
+        top: rem(35);
+    }
+
+    .swiper-button-prev {
+        left: initial;
+        right: rem(185.2);
+    }
+
+    .swiper-button-next {
+        right: rem(25);
+    }
+
+    /* 前へ次への矢印カスタマイズ */
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        transition: .3s opacity;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        height: rem(80);
+        margin: auto;
+        width: rem(80);
+        display: block;
+    }
+
+    .swiper-button-prev:hover::after,
+    .swiper-button-next:hover::after {
+        opacity: 0.7;
+    }
+
+    /* 前への矢印カスタマイズ */
+    .swiper-button-prev::after {
+        background-image: url(../images/common/campaign-icon1.svg);
+    }
+
+    /* 次への矢印カスタマイズ */
+    .swiper-button-next::after {
+        background-image: url(../images/common/campaign-icon2.svg);
+    }
+
+    /* 画像サイズ調整 */
+    .swiper-slide img {
+        height: auto;
+        width: 100%;
+
+    }
+
+    .swiper-button-next.swiper-button-disabled,
+    .swiper-button-prev.swiper-button-disabled {
+        opacity: 1;
+    }
+}

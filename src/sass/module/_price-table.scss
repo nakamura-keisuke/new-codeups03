@@ -1,0 +1,103 @@
+@use 'global'as *;
+
+.price-table {
+    border: rem(1) solid $green2;
+
+    @include mq("md") {
+        display: flex;
+    }
+}
+
+.price-table__title {
+    text-align: center;
+    font-size: rem(16);
+    font-weight: bold;
+    border-bottom: rem(1) solid $green2;
+    padding: rem(7) 0;
+    background-color: $green2;
+    color: $white;
+
+    @include mq("md") {
+        width: rem(200);
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.price-table__title span {
+    padding-left: rem(32);
+    position: relative;
+
+    @include mq("md") {
+        padding-left: 0;
+        padding-bottom: rem(70);
+    }
+}
+
+.price-table__title span::before {
+    content: "";
+    position: absolute;
+    width: rem(24);
+    height: rem(24);
+    background-image: url(../images/common/price-section-sp-img.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 2;
+
+    @include mq("md") {
+        background-image: url(../images/common/price-section-img.svg);
+        width: rem(64);
+        height: rem(64);
+        top: rem(32);
+        transform: translateY(0);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.price-table__item {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include mq("md") {
+        width: 100%;
+        max-width: rem(500);
+    }
+}
+
+.price-table__menu,
+.price-table__price {
+    border-bottom: rem(1) solid $green2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.price-table__menu {
+    width: 70%;
+    border-right: rem(1) solid $green2;
+    text-align: center;
+
+    @include mq("md") {
+        width: 68%;
+        text-align: initial;
+        padding-left: rem(18);
+    }
+}
+
+.price-table__price {
+    padding: rem(18) rem(14) rem(18) 0;
+    width: 30%;
+    text-align: right;
+
+    @include mq("md") {
+        padding: rem(16.5) rem(14) rem(16.5) 0;
+        width: 32%;
+    }
+}

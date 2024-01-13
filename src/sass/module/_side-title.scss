@@ -1,0 +1,21 @@
+@use 'global'as *;
+
+.side-title {
+    color: $green;
+    font-size: rem(24);
+    position: relative;
+    padding: rem(10) 0 rem(4) rem(74);
+    border-left: rem(8) solid $green2;
+}
+
+.side-title::before {
+    background-image: url(../images/common/side-title-img.svg);
+    top: 0;
+    left: rem(16);
+    position: absolute;
+    height: rem(50);
+    width: rem(50);
+    background-size: cover;
+    content: "";
+    z-index: 3;
+}

@@ -1,0 +1,67 @@
+@use 'global'as *;
+
+.blog-article__cards {
+    margin-top: rem(25);
+}
+
+.blog-article__card:hover img {
+    transform: scale(1.1);
+    /* 拡大 */
+}
+
+.blog-article__card {
+    align-items: flex-start;
+    display: flex;
+    padding: rem(16);
+    background: $white;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.3s opacity;
+    opacity: 1;
+}
+
+.blog-article__card:hover {
+    opacity: 0.7;
+}
+
+.blog-article__link {
+    display: block;
+}
+
+.blog-article__link:not(:first-child) {
+    margin-top: rem(24);
+}
+
+.blog-article__card-img img {
+    width: 100%;
+    max-width: rem(121);
+    object-fit: cover;
+    aspect-ratio: 121 / 90;
+    transition: transform .3s ease;
+}
+
+.blog-article__card-img {
+    overflow: hidden;
+}
+
+.blog-article-card__body {
+    margin-left: rem(16);
+    margin-top: rem(-6);
+
+    @include mq("md") {
+        margin-left: rem(17);
+    }
+}
+
+.blog-article-card__date {
+    color: $green;
+    font-family: $second-font;
+    font-size: rem(12);
+}
+
+.blog-article-card__title {
+    color: $green;
+    font-size: rem(16);
+    font-weight: $medium;
+    margin-top: rem(3);
+
+}

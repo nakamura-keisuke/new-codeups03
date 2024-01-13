@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.common-header-layout {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 7000;
+}

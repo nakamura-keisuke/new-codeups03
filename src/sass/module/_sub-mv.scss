@@ -1,0 +1,81 @@
+@use 'global'as *;
+
+.sub-mv {
+        position: relative;
+        width: 100%;
+        height: rem(460);
+
+        @include mq("md") {
+                height: rem(548);
+        }
+}
+
+.sub-mv__inner {
+        width: 100%;
+        height: inherit;
+}
+
+.sub-mv__img {
+        display: block;
+        width: 100%;
+        height: inherit;
+}
+
+.sub-mv__img picture {
+        width: 100%;
+        display: block;
+        height: inherit;
+}
+
+.sub-mv__img picture img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 375 / 460;
+
+        @include mq("md") {
+                aspect-ratio: 1440/548;
+        }
+}
+
+.sub-mv__header {
+        position: absolute;
+        z-index: 100;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        letter-spacing: normal;
+        color: $white;
+
+        @include mq("md") {
+                top: 59%;
+        }
+}
+
+
+.sub-mv__main-title {
+        font-family: $third-font;
+        font-size: rem(40);
+        font-weight: $normal;
+        text-transform: capitalize;
+        color: $white;
+
+        @include mq('md') {
+                font-size: rem(80);
+        }
+}
+
+.sub-mv__main-title.sub-mv__main-title--term {
+        text-transform: initial;
+}
+
+.sub-mv__main-title.sub-mv__main-title--faq {
+        text-transform: uppercase;
+}
+
+.sub-mv__main-title span {
+        text-transform: none;
+}

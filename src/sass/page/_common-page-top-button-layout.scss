@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.common-page-top-button-layout {
+    bottom: rem(16);
+    right: rem(15);
+    position: fixed;
+    z-index: 200;
+}

@@ -1,0 +1,67 @@
+@use 'global'as *;
+
+.privacy-section {
+    position: relative;
+}
+
+.privacy-section::before {
+    content: "";
+    background-image: url(../images/common/campaign-section-sp-img.png);
+    position: absolute;
+    background-size: cover;
+    height: rem(55);
+    top: rem(-25);
+    width: 100%;
+    z-index: 0;
+    left: calc(50% - min(45.5vw, 15rem));
+    max-width: rem(120);
+
+    @include mq("md") {
+        background-image: url(../images/common/campaign-section-img.png);
+        max-width: rem(301);
+        height: rem(138);
+        top: rem(-71);
+        left: calc(50% - min(47vw, 38.875rem));
+        z-index: -1;
+    }
+}
+
+.privacy-section__inner.inner {
+    max-width: rem(850);
+}
+
+.privacy-section__contents {
+    @include mq("md") {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.privacy-section__title {
+    color: $green;
+    font-size: rem(24);
+    font-weight: $medium;
+
+    @include mq("md") {
+        font-size: rem(32);
+    }
+}
+
+.privacy-section__text-group:not(:first-child) {
+    margin-top: rem(32);
+}
+
+.privacy-section__items {
+    margin-top: rem(38);
+}
+
+.privacy-section__text {
+    color: $green;
+    line-height: 2;
+    text-align: justify;
+}
+
+.privacy-section__text.privacy-section__text--indent {
+    padding-left: 1.5em;
+    text-indent: -1.3em;
+}

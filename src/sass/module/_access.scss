@@ -1,0 +1,177 @@
+@use "global"as *;
+
+.access {
+    text-align: center;
+
+    @include mq("md") {
+        background-color: $white;
+        box-shadow: rem(8) rem(8) rem(8.4) rgba(0, 0, 0, 0.25);
+        padding: rem(81) rem(5) rem(82.5);
+    }
+}
+
+.access__catch {
+    @include mq("md") {
+        width: 40.74%;
+        position: relative;
+        margin-left: rem(47);
+    }
+}
+
+.access__catch::after {
+    @include mq("md") {
+        content: "";
+        display: inline-block;
+        width: rem(1);
+        height: rem(255);
+        background-color: $green2;
+        position: absolute;
+        top: rem(-2);
+        right: rem(-84);
+    }
+}
+
+.access__logo {
+    position: relative;
+}
+
+.access__logo::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: -2.5%;
+    left: 7%;
+    /*線の形状*/
+    width: 86%;
+    height: rem(1);
+    background-color: $green2;
+    border-bottom: solid rem(1) $green2;
+
+    @include mq("md") {
+        bottom: -3%;
+        width: 101%;
+        left: -0.5%;
+    }
+}
+
+.access__logo img {
+    width: rem(174);
+    display: inline-block;
+
+    @include mq("md") {
+        width: rem(200);
+    }
+}
+
+.access__information {
+    margin-top: rem(16);
+
+    @include mq("md") {
+        display: flex;
+        margin-top: rem(25);
+    }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .access__information {
+    @include mq("md") {
+        justify-content: space-between;
+    }
+}
+
+.access__header {
+    @include mq("md") {
+        margin-top: rem(21);
+    }
+}
+
+.access__text {
+    color: $green;
+    font-size: rem(16);
+    line-height: 1.74;
+
+    @include mq("md") {
+        text-align: left;
+        font-size: clamp(0.75rem, 0.464rem + 0.595vw, 1rem);
+    }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .access__text {
+    @include mq("md") {
+        font-size: clamp(0.625rem, 0.054rem + 1.19vw, 1.125rem);
+        line-height: 1.9;
+    }
+}
+
+.access__map {
+    text-align: center;
+    margin-top: rem(13);
+    width: 85.508%;
+    display: inline-block;
+    aspect-ratio: 295 /160;
+    height: rem(148);
+
+    @include mq("md") {
+        margin-top: 0;
+        margin-left: rem(17);
+        width: 62.628%;
+        aspect-ratio: 273 / 148;
+        height: rem(160);
+    }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .access__map {
+    @include mq("md") {
+        width: 64%;
+        margin-left: clamp(0.5rem, -0.063rem + 1.8vw, 1.063rem);
+    }
+}
+
+.access__map iframe {
+    vertical-align: bottom;
+    object-fit: cover;
+    aspect-ratio: 295 /160;
+    width: 100%;
+    height: 100%;
+
+    @include mq("md") {
+        aspect-ratio: 273 / 148;
+    }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .access__map iframe {
+    object-fit: initial;
+}
+
+.access__group {
+    margin-top: rem(41);
+
+    @include mq("md") {
+        width: 29.16%;
+        margin-top: 0;
+        margin-left: rem(166);
+    }
+}
+
+.access__reserve {
+    margin-top: rem(12.8);
+    color: $green2;
+    font-size: rem(14);
+    line-height: 1;
+
+    @include mq("md") {
+        margin-top: rem(11);
+    }
+}
+
+.access__button {
+    margin-top: rem(42);
+    text-align: center;
+}
