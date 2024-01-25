@@ -1,30 +1,5 @@
 @use 'global'as *;
 
-.blog-license-section {
-    position: relative;
-}
-
-.blog-license-section::before {
-    content: "";
-    background-image: url(../images/common/campaign-section-sp-img.png);
-    position: absolute;
-    background-size: cover;
-    height: rem(55);
-    top: rem(-17);
-    width: 100%;
-    z-index: -1;
-    left: calc(50% - min(46vw, 15rem));
-    max-width: rem(120);
-
-    @include mq("md") {
-        background-image: url(../images/common/campaign-section-img.png);
-        max-width: rem(301);
-        height: rem(138);
-        top: rem(-65);
-        left: calc(50% - min(47vw, 38.875rem));
-    }
-}
-
 .blog-license-section__contents {
     @include mq("md") {
     display: flex;

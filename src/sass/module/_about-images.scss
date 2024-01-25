@@ -1,35 +1,10 @@
 @use "global"as *;
 
-.about {
+.about-image {
     position: relative;
 }
 
-.about::after {
-    content: none;
-
-    @include mq("md") {
-        content: "";
-        background-image: url(../images/common/about-img3.png);
-        position: absolute;
-        right: calc(50% - min(47vw, 39.875rem));
-        bottom: rem(-92);
-        width: 50%;
-        max-width: rem(194);
-        background-size: cover;
-        height: rem(181);
-    }
-
-}
-
-.about__contents {
-    margin-top: rem(58);
-
-    @include mq("md") {
-        margin-top: rem(120);
-    }
-}
-
-.about__image-left {
+.about-image__left {
     position: absolute;
     left: rem(-1);
     top: rem(-26);
@@ -41,7 +16,7 @@
     }
 }
 
-.about__image-left picture img {
+.about-image__left picture img {
     aspect-ratio: 128 / 194;
     object-fit: cover;
     width: 100%;
@@ -53,14 +28,14 @@
     }
 }
 
-.about__image-right {
+.about-image__right {
     margin-left: auto;
     width: 81.45%;
     display: block;
     height: auto;
 }
 
-.about__image-right.about__image-right--about-section {
+.about-image__right.about-image__right--about-section {
     width: 100%;
     position: relative;
 
@@ -69,7 +44,7 @@
     }
 }
 
-.about__image-right picture img {
+.about-image__right picture img {
     object-fit: cover;
     aspect-ratio: 281 / 186;
     width: 100%;
@@ -80,7 +55,7 @@
     }
 }
 
-.about__text-group {
+.about-image__text-group {
     margin-top: rem(38);
 
     @include mq("md") {
@@ -94,7 +69,7 @@
     }
 }
 
-.about__title {
+.about-image__title {
     color: $green2;
     font-family: $second-font;
     font-size: rem(40);
@@ -108,10 +83,10 @@
     }
 }
 
-.about__title.about__title--about-section {
+.about-image__title.about-image__title--about-section {
     position: absolute;
     top: 5%;
-    left: 7%;
+    left: calc(50% - min(38.5vw, 16rem));
     color: $white;
 
     @include mq("md") {
@@ -119,7 +94,7 @@
     }
 }
 
-.about__text-unit {
+.about-image__text-unit {
     margin-top: rem(16);
 
     @include mq("md") {
@@ -128,14 +103,14 @@
     }
 }
 
-.about__text-unit.about__text-unit--about-section {
+.about-image__text-unit.about-image__text-unit--about-section {
     @include mq("md") {
         margin-top: rem(24);
         margin-left: rem(44);
     }
 }
 
-.about__text {
+.about-image__text {
     color: $green;
     font-size: rem(16);
     line-height: 1.5;
@@ -146,7 +121,7 @@
     }
 }
 
-.about__button {
+.about-image__button {
     margin-top: rem(27);
     text-align: center;
 

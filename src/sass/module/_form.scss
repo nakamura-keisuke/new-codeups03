@@ -70,6 +70,26 @@
     font-size: rem(12);
 }
 
+.form__input-text.form__input-text--campaign {
+    position: relative;
+}
+
+.form__input-text.form__input-text--campaign::before{
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    width: rem(22);
+    height: rem(24);
+    top: 27%;
+    left: rem(1);
+    background-image: url(../images/common/archive-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: rotate(30deg);
+    transition: 0.3s transform;
+}
+
 .form__input-text.is-active {
     border: rem(1) solid #C94800;
     background-color: rgba($color: #C94800, $alpha: 0.2);
@@ -106,7 +126,7 @@
     content: "";
     position: absolute;
     width: rem(13);
-    height: rem(5);
+    height: rem(7);
     left: 0.4%;
     top: 30%;
     background-image: url(../images/common/check-mark.svg);
@@ -165,7 +185,7 @@ input:checked.input:checked span::after {
     background-color: $white;
 
     @include mq("md") {
-        left: rem(185);
+        left: rem(150);
     }
 }
 
@@ -191,7 +211,7 @@ input:checked.input:checked span::after {
     opacity: 0;
 
     @include mq("md") {
-        left: 27%;
+        left: 23.5%;
         top: 38%;
     }
 }

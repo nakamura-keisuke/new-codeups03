@@ -46,10 +46,11 @@
 
     @include mq('md') {
         grid-template-columns: repeat(11, 1fr);
-        column-gap: rem(8);
-        row-gap: rem(3);
     }
+}
 
+.gallery-section__item{
+    cursor: pointer;
 }
 
 // モーダル

@@ -1,13 +1,5 @@
 @use 'global'as *;
 
-.campaign-section {
-    margin-top: rem(48);
-
-    @include mq("md") {
-        margin-top: rem(146);
-    }
-}
-
 .campaign-section__tab {
     position: relative;
 }
@@ -24,21 +16,15 @@
     }
 }
 
-.campaign-section__content {
+.campaign-section__items {
     margin-top: rem(40);
     padding: 0 rem(32.5);
-
-    @include mq("md") {
-        padding: 0;
-    }
-}
-
-.campaign-section__items {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: rem(39);
 
     @include mq("md") {
+        padding: 0;
         grid-template-columns: repeat(2, 1fr);
         row-gap: rem(80);
         column-gap: rem(40);

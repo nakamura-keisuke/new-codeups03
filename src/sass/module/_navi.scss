@@ -14,7 +14,6 @@
 
 .navi.navi--site-map {
     background-color: initial;
-    position: relative;
     padding: initial;
 }
 
@@ -24,24 +23,6 @@
         text-align: center;
     }
 }
-
-.navi.navi--site-map::before {
-    content: "";
-    background-image: url(../images/common/campaign-section-sp-img.png);
-    position: absolute;
-    background-size: cover;
-    height: rem(55);
-    top: rem(-25);
-    width: 100%;
-    z-index: 0;
-    left: calc(50% - min(45.5vw, 15rem));
-    max-width: rem(120);
-
-    @include mq("md") {
-        content: none;
-    }
-}
-
 
 .navi__imgs {
     @include mq("md") {

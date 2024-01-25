@@ -10,6 +10,12 @@
     border: rem(1) solid $green2;
     background-color: $white;
     text-align: center;
+    cursor: pointer;
+}
+
+.tab__tab-button:hover {
+    background-color: $green2;
+    color: $white;
 }
 
 .tab__tab-button:not(:first-child) {
@@ -18,30 +24,8 @@
     }
 }
 
-.tab__tab-button.tab__tab-button--all {
+.tab__tab-button.is-active {
     text-transform: uppercase;
     color: $white;
     background-color: $green2;
-}
-
-.tab__tab-button.tab__tab-button--all::before {
-    content: "";
-    background-image: url(../images/common/campaign-section-sp-img.png);
-    position: absolute;
-    background-size: cover;
-    height: rem(55);
-    top: rem(-24);
-    width: 100%;
-    z-index: 0;
-    left: calc(50% - min(45.5vw, 15rem));
-    max-width: rem(120);
-
-    @include mq("md") {
-        background-image: url(../images/common/campaign-section-img.png);
-        max-width: rem(301);
-        height: rem(138);
-        top: rem(-71);
-        left: calc(50% - min(47vw, 38.875rem));
-
-    }
 }

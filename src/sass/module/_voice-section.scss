@@ -1,24 +1,5 @@
 @use 'global'as *;
 
-.voice-section {
-    margin-top: rem(48);
-
-    @include mq("md") {
-        margin-top: rem(146);
-    }
-}
-
-.voice-section__items {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: rem(40);
-
-    @include mq("md") {
-        row-gap: rem(78);
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 .voice-section__tab {
     position: relative;
 }
@@ -35,18 +16,16 @@
     }
 }
 
-.voice-section__content {
+.voice-section__items {
     margin-top: rem(40);
+    display: grid;
 
     @include mq("md") {
         padding: 0;
+        row-gap: rem(78);
     }
 }
 
 .voice-card__contact-button {
     margin-bottom: rem(40);
-}
-
-.voice-section__item.voice-card {
-    height: auto;
 }

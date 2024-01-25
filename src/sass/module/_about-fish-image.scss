@@ -1,0 +1,27 @@
+@use 'global'as *;
+
+.about-fish-image {
+    position: relative;
+}
+
+.about-fish-image::before {
+    content: "";
+    background-image: url(../images/common/campaign-section-sp-img.png);
+    position: absolute;
+    background-size: cover;
+    height: rem(55);
+    top: rem(-24);
+    width: 100%;
+    z-index: 1;
+    left: calc(50% - min(45.5vw, 15rem));
+    max-width: rem(120);
+
+    @include mq("md") {
+        background-image: url(../images/common/campaign-section-img.png);
+        max-width: rem(301);
+        height: rem(138);
+        top: rem(-151);
+        left: calc(50% - min(47vw, 38.875rem));
+
+    }
+}

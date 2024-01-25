@@ -1,7 +1,9 @@
 @use 'global'as *;
 
 .price-table {
-    border: rem(1) solid $green2;
+    border-top: rem(1) solid $green2;
+    border-right: rem(1) solid $green2;
+
 
     @include mq("md") {
         display: flex;
@@ -18,7 +20,7 @@
     color: $white;
 
     @include mq("md") {
-        width: rem(200);
+        width: 28.6%;
         display: flex;
         padding: 0;
         flex-direction: column;
@@ -66,8 +68,7 @@
     flex-wrap: wrap;
 
     @include mq("md") {
-        width: 100%;
-        max-width: rem(500);
+        width: calc(100% - 28.6%)
     }
 }
 
@@ -87,7 +88,8 @@
     @include mq("md") {
         width: 68%;
         text-align: initial;
-        padding-left: rem(18);
+        padding: rem(16) rem(8) rem(16) rem(18);
+        padding-block: rem(16);
     }
 }
 

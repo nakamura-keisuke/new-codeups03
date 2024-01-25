@@ -1,6 +1,7 @@
 @use "global"as *;
 
 .archive__year span {
+    cursor: pointer;
     font-size: rem(24);
     color: $green2;
     padding-left: rem(32);
@@ -8,6 +9,7 @@
 }
 
 .archive__year span::before {
+    cursor: pointer;
     content: "";
     position: absolute;
     width: rem(22);

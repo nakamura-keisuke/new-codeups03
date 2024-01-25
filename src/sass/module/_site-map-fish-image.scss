@@ -1,0 +1,22 @@
+@use 'global'as *;
+
+.site-map-fish-image {
+    position: relative;
+}
+
+.site-map-fish-image::before {
+    content: "";
+    background-image: url(../images/common/campaign-section-sp-img.png);
+    position: absolute;
+    background-size: cover;
+    height: rem(55);
+    top: rem(-24);
+    width: 100%;
+    z-index: 0;
+    left: calc(50% - min(45.5vw, 15rem));
+    max-width: rem(120);
+
+    @include mq("md") {
+        display: none;
+    }
+}

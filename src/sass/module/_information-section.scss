@@ -1,30 +1,5 @@
 @use 'global'as *;
 
-.information-section {
-    position: relative;
-}
-
-.information-section::before {
-    content: "";
-    background-image: url(../images/common/campaign-section-sp-img.png);
-    position: absolute;
-    background-size: cover;
-    height: rem(55);
-    top: rem(-92);
-    width: 100%;
-    z-index: 0;
-    left: calc(50% - min(45.8vw, 15rem));
-    max-width: rem(120);
-
-    @include mq("md") {
-        background-image: url(../images/common/campaign-section-img.png);
-        max-width: rem(301);
-        height: rem(138);
-        top: rem(-71);
-        left: calc(50% - min(47vw, 38.875rem));
-    }
-}
-
 .information-section__buttons {
     gap: rem(19);
     display: flex;
@@ -37,6 +12,7 @@
 }
 
 .information-section__button {
+    cursor: pointer;
     display: block;
     color: $green2;
     text-align: center;
@@ -86,6 +62,17 @@
     }
 }
 
+.information-section__button.information-section__button--license:hover::before {
+    @include mq("md") {
+        background-color: $white;
+        mask-image: url(../images/common/information-section-button-img1.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-image: none;
+    }
+}
+
 .information-section__button.information-section__button--fun {
     @include mq("md") {
         padding: rem(29) rem(18) rem(26) rem(90);
@@ -119,6 +106,17 @@
     }
 }
 
+.information-section__button.information-section__button--fun:hover::before {
+    @include mq("md") {
+        background-color: $white;
+        mask-image: url(../images/common/information-section-button-img2.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-image: none;
+    }
+}
+
 .information-section__button.information-section__button--experience {
     position: relative;
 }
@@ -135,6 +133,7 @@
         width: 100%;
         content: "";
         z-index: 3;
+        display: block;
     }
 }
 
@@ -149,7 +148,23 @@
     }
 }
 
+.information-section__button.information-section__button--experience:hover::before {
+    @include mq("md") {
+        background-color: $white;
+        mask-image: url(../images/common/information-section-button-img3.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-image: none;
+    }
+}
+
 .information-section__button.is-active {
+    color: $white;
+    background-color: $green2;
+}
+
+.information-section__button:hover {
     color: $white;
     background-color: $green2;
 }
